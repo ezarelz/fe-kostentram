@@ -6,6 +6,6 @@ export const site = {
   ogImage: '/hero.jpg',
   whatsapp: 'https://wa.me/6281289398509',
   address: 'Jl. Poncoran Barat XI C No. 14A, Pancoran, Jakarta Selatan',
-  email: 'admin@kolektentram.my.id',
+  email: 'admin@kostentram.my.id',
   locale: 'id_ID',
 };

@@ -1,5 +1,5 @@
-// app/(marketing)/contact/page.tsx
 import ContactForm from '@/components/ui/ContactForm';
+import Maps from '@/components/layout/find-us/Maps';
 import Image from 'next/image';
 import { site } from '@/lib/seo';
 import Link from 'next/link';
@@ -21,7 +21,6 @@ export default function Contact() {
             <p>Email : {site.email}</p>
 
             <div className='flex items-center gap-2'>
-              {' '}
               <span className='font-medium'>WA: Click → </span>
               <Link
                 href={site.whatsapp}
@@ -53,6 +52,11 @@ export default function Contact() {
             Kirim Pesan
           </h2>
           <ContactForm />
+        </section>
+
+        {/* Maps Component */}
+        <section className='flex flex-col items-center justify-center w-full'>
+          <Maps />
         </section>
       </main>
       <Footer />

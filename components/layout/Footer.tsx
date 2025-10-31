@@ -25,7 +25,7 @@ export default function Footer() {
 
         <div className='space-y-1'>
           <p>Jl. Poncoran Barat XI C No. 14A, Pancoran, Jakarta Selatan</p>
-          <p>admin@kolektentram.my.id</p>
+          <p>admin@kostentram.my.id</p>
         </div>
       </div>
     </footer>

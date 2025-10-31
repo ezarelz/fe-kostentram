@@ -1,0 +1,74 @@
+.contactPage {
+  width: 100%;
+  padding: 3rem 0;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+.mapGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 0 2rem;
+}
+
+.mapItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.locationLabel {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+.mapContainer {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 75%; /* 4:3 aspect ratio */
+  height: 0;
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.mapContainer iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Tablet */
+@media (max-width: 968px) {
+  .mapGrid {
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+}
+
+/* Mobile: Stack vertically */
+@media (max-width: 768px) {
+  .mapGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .mapContainer {
+    padding-bottom: 100%; /* Square on mobile */
+  }
+}

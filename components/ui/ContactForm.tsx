@@ -17,17 +17,19 @@ export default function ContactForm() {
     e.preventDefault();
     setLoading(true);
     setStatus(null);
+
     try {
       const result = await emailjs.send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
         {
-          from_name: form.name,
-          reply_to: form.email,
+          name: form.name, // Changed from from_name to name
+          email: form.email, // Changed from reply_to to email
           message: form.message,
         },
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       );
+
       console.log('EmailJS result', result.status, result.text);
       setStatus('Pesan berhasil terkirim! ✅');
       setForm({ name: '', email: '', message: '' });
